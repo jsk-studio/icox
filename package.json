@@ -1,0 +1,32 @@
+{
+  "name": "@bilibili-bbq/cox",
+  "version": "0.0.3",
+  "private": false,
+  "main": "dist/index.umd.min.js",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "help": "vue-cli-service help build",
+    "build:lib": "npm run build:vue && npm run build:tsc",
+    "build:tsc": "tsc -p tsconfig.prod.json && cp dist/index.d.ts dist/index.umd.min.d.ts",
+    "build:vue": "vue-cli-service build --mode lib --target lib --name index lib-src/index.ts"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-router": "^4.5.13",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-plugin-vuex": "^4.5.13",
+    "@vue/cli-service": "^4.5.13",
+    "@vue/compiler-sfc": "^3.2.2",
+    "element-plus": "^1.1.0-beta.24",
+    "sass": "^1.51.0",
+    "tslib": "^2.4.0",
+    "sass-loader": "^8.0.2",
+    "typescript": "~4.1.5"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.184",
+    "lodash": "^4.17.21",
+    "vue": "^3.2.23",
+    "vue-router": "^4.0.11",
+    "vuex": "^4.0.2"
+  }
+}
