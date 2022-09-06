@@ -52,7 +52,7 @@ const authMenu = computed(() => {
             tree.shown = true
             shown[deep] = true
         }
-        if (shown[deep + 1]) {
+        if (shown[deep + 1] && tree.children.some((c: any) => c.shown)) {
             tree.shown = true
             shown[deep] = true
         }
