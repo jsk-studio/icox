@@ -4,6 +4,7 @@ import { defineAsyncComponent, toRaw, unref } from 'vue';
 export * from './parseToMapList'
 export * from './parseToOriginTree'
 export * from './createCombineList'
+export * from './hooks'
 
 export function matchArguments(tree: any, opts: any) {
     for (const arg of tree.arguments || []) {

@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar" :class="{ small: collapse}">
+  <div class="sidebar" :class="{ small: collapse }">
     <div class="title" v-if="!collapse">{{ title }}</div>
     <el-menu
         :ref="ref => menuRef = ref"
@@ -22,10 +22,9 @@
 import { onMounted, ref, computed } from "vue-demi"
 import { useRoute } from "vue-router"
 import { useStore } from "vuex"
-import { traverseTree } from '../../utils'
+import { traverseTree, useCoxApp } from '../../utils'
 
 const props = defineProps(['title', 'allMenus'])
-const store = useStore()
 const route = useRoute()
 const menuRef = ref()
 
@@ -59,7 +58,7 @@ onMounted(() => {
   })
 })
 
-const collapse = computed(() => store.state.collapse)
+const { collapse } = useCoxApp(['collapse'])
 
 </script>
 
