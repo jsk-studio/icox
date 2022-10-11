@@ -58,7 +58,7 @@ onMounted(() => {
   })
 })
 
-const { collapse } = useState([COX_MODLE_APP, 'collapse'])
+const { collapse } = useState(COX_MODLE_APP, ['collapse'])
 
 </script>
 
