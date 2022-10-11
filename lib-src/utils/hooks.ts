@@ -31,7 +31,3 @@ export function useGetters(...keys: any[]){
 export function useMutations(...keys: any[]){
     return useMapFn(keys, mapMutations)
 }
-
-export function useCoxApp(keys: any[]) {
-    return useState(COX_MODLE_APP, keys)
-}

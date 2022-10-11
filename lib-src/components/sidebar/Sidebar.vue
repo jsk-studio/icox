@@ -22,7 +22,7 @@
 import { onMounted, ref, computed } from "vue-demi"
 import { useRoute } from "vue-router"
 import { useStore } from "vuex"
-import { traverseTree, useCoxApp } from '../../utils'
+import { traverseTree, useState, COX_MODLE_APP } from '../../utils'
 
 const props = defineProps(['title', 'allMenus'])
 const route = useRoute()
@@ -58,7 +58,7 @@ onMounted(() => {
   })
 })
 
-const { collapse } = useCoxApp(['collapse'])
+const { collapse } = useState([COX_MODLE_APP, 'collapse'])
 
 </script>
 
