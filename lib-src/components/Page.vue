@@ -15,16 +15,17 @@
   </el-container>
 </template>
 <script lang="ts" setup>
-import { computed, reactive } from "@vue/reactivity";
+import { useState, COX_MODLE_APP } from "../utils";
+import { computed, reactive, unref } from "vue";
 import { useRoute } from "vue-router";
+
 const route = useRoute()
-const props = defineProps(['nosidebar'])
 const state = reactive({
     shown: false,
 })
-
+const { sidebar } = useState(COX_MODLE_APP, ['sidebar'])
 const showSidebar = computed(() => {
-    return !props.nosidebar?.includes(route.name)
+    return !unref(sidebar).status.nosidebar?.includes(route.name)
 })
 
 </script>

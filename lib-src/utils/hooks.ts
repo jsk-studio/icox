@@ -31,3 +31,13 @@ export function useGetters(...keys: any[]){
 export function useMutations(...keys: any[]){
     return useMapFn(keys, mapMutations)
 }
+
+export function useSidebarTree(test?: any) {
+    const { sidebar: sidebarRef } = useState(COX_MODLE_APP, ['sidebar'])
+    const sidebar = unref(sidebarRef)
+    if (!test) {
+        return computed(() => sidebar.allMatch)
+    } else {
+        return computed(() => sidebar.match(test))
+    }
+}
