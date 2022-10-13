@@ -1,7 +1,7 @@
 import { createApp } from "vue"
 import ElementPlus from 'element-plus';
 import locale from 'element-plus/lib/locale/lang/zh-cn'
-import { COX_MODLE_APP } from "..";
+import { COX_MODLE_APP } from "../utils/hooks";
 
 export const common = {
 } as any
@@ -83,6 +83,6 @@ export function registCoxRenders(reds: IRegistRenders = {}) {
     common.store.commit(`${COX_MODLE_APP}/registRenders`, renders)
 }
 
-export function getCoxAppState() {
-    return common.store.state[COX_MODLE_APP] || {}
+export function getCoxAppState(moduleName = COX_MODLE_APP) {
+    return common.store.state[moduleName] || {}
 }

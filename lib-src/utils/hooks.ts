@@ -2,6 +2,7 @@ import { computed, unref } from 'vue'
 import { mapState, mapGetters, mapActions, mapMutations, useStore } from 'vuex';
 
 export const COX_MODLE_APP = '[cox]app'
+export const COX_MODLE_FAAS = '[scope]faas'
 
 function useMapFn(keys: any, mapFn: any){
     //mapFn对应想使用的函数
