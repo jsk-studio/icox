@@ -1,6 +1,6 @@
 {
-  "name": "@bilibili-bbq/cox",
-  "version": "0.0.10",
+  "name": "icox",
+  "version": "0.0.1",
   "private": false,
   "main": "dist/index.umd.min.js",
   "scripts": {
