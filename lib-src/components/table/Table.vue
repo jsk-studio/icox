@@ -5,6 +5,7 @@
     @sort-change="onSortChange"
     :ref="r => tableRef = r"
     :height="fixheight"
+    :key="state.stableKey"
 >
     <TableColumn 
         v-for="(l, i) in state.list" 

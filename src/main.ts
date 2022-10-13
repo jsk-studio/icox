@@ -8,13 +8,15 @@ import { createRouter, createWebHistory } from 'vue-router';
 import { defineSidebarRouter, createCoxApp, registCoxApp } from '../lib-src';
 
 const store = createStore({})
+// @ts-ignore
+window.$store = store 
 registCoxApp(store)
 
 const sidebar = defineSidebarRouter({
     routes: [{
         name: 'Entry',
         path: '/',
-        load: { component: () => import('./MPage.vue') },
+        load: () => import('./curd-list'),
     }, {
         name: 'Entry2',
         path: '/2',
